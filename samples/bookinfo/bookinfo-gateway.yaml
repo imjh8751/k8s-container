@@ -41,3 +41,12 @@ spec:
         host: productpage
         port:
           number: 9080
+  http:
+  - match:
+    - uri:
+        exact: /details
+    route:
+    - destination:
+        host: details
+        port:
+          number: 9080
