@@ -3,11 +3,12 @@ kind: Gateway
 metadata:
   name: helloworld-gateway
 spec:
-  gatewayClassName: istio
-  listeners:
-  - name: http
-    port: 80
-    protocol: HTTP
-    allowedRoutes:
-      namespaces:
-        from: Same
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
