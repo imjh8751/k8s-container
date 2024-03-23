@@ -60,4 +60,31 @@ spec:
             name: productpage
             port:
               number: 9080
+  - http:
+      paths:
+      - path: /reviews
+        pathType: Exact
+        backend:
+          service:
+            name: reviews
+            port:
+              number: 9080
+  - http:
+      paths:
+      - path: /details
+        pathType: Exact
+        backend:
+          service:
+            name: details
+            port:
+              number: 9080
+  - http:
+      paths:
+      - path: /ratings
+        pathType: Exact
+        backend:
+          service:
+            name: ratings
+            port:
+              number: 9080
 ---
