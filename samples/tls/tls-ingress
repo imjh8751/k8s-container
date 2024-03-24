@@ -19,16 +19,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: tls-ingress
-  annotations:
-    kubernetes.io/ingress.class: "istio"
 spec:
-  ingressClassName: nginx
   tls:
   - hosts:
     - "api.itapi.io"
     secretName: istio-tls-secret
   rules:  rules:
-  - http:
+  - hosts: "api.itapi.io"
+    http:
       paths:
       - path: /productpage
         pathType: Exact
