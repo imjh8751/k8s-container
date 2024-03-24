@@ -31,4 +31,18 @@ spec:
           service:
             name: helloworld
             port:
-              number: 9080
+              number: 5000
+      - path: /helloworld-v1
+        pathType: Exact
+        backend:
+          service:
+            name: helloworld-v1
+            port:
+              number: 5000
+      - path: /helloworld-v2
+        pathType: Exact
+        backend:
+          service:
+            name: helloworld-v2
+            port:
+              number: 5000
