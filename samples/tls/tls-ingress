@@ -25,10 +25,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - *
+    - api.itapi.org
     secretName: istio-ingress-cert
   rules:
-  - host: *
+  - host: api.itapi.org
   - http:
       paths:
       - path: /productpage
