@@ -1,0 +1,32 @@
+# This ServiceEntry exposes the hosts needed for Python `pip`.
+# After applying this file, Istio-enabled pods will be able to execute
+# `pip search istio`.
+
+# HTTP and TLS, the host must be specified
+# See https://istio.io/docs/tasks/traffic-management/egress/
+
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: python-https
+spec:
+  hosts:
+  - pypi.python.org
+  ports:
+  - number: 443
+    name: https
+    protocol: HTTPS
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: all-https
+spec:
+  hosts:
+  - www.naver.com
+  - www.daum.net
+  - www.google.com
+  ports:
+  - number: 443
+    name: https
+    protocol: HTTPS
