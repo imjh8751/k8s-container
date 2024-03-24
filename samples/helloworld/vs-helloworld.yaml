@@ -11,7 +11,7 @@ spec:
   http:
   - match:
     - uri:
-        exact: /hello
+        exact: /helloworld
     route:
     - destination:
         host: helloworld
