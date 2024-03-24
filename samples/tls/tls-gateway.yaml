@@ -20,6 +20,6 @@ spec:
       protocol: HTTPS
     tls:
       mode: SIMPLE # 통상적인 tls 모드입니다
-      credentialName: istio-ingress-cert # 쿠버네티스 secret 명을 입력
+      credentialName: istio-ingressgateway-itapi-certs # 쿠버네티스 secret 명을 입력
     hosts:
       - "*"
