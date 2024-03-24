@@ -12,24 +12,10 @@ spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /productpage
         pathType: Prefix
         backend:
           service:
-            name: ing-default
+            name: productpage
             port:
-              number: 80
-      - path: /hn
-        pathType: Prefix
-        backend:
-          service:
-            name: ing-hn
-            port:
-              number: 80
-      - path: /ip 
-        pathType: Prefix
-        backend:
-          service:
-            name: ing-ip
-            port:
-              number: 80
+              number: 9080
