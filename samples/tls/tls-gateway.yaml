@@ -1,0 +1,24 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: tls-gateway
+  namespace: tls # 원하는 네임스페이스로 지정
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "api.itapi.org"
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE # 통상적인 tls 모드입니다
+      credentialName: istio-ingress-cert # 쿠버네티스 secret 명을 입력
+    hosts:
+    - "api.itapi.org"
