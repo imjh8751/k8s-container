@@ -5,10 +5,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "api.itapi.io"
+    - "itapi.io"
     secretName: istio-tls-secret
   rules:
-  - host: "api.itapi.io"
+  - host: "itapi.io"
     http:
       paths:
       - path: /productpage
