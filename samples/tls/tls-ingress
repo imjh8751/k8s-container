@@ -25,8 +25,8 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - "yourdomain.com"
-    secretName: my-tls-secret
+    - "api.itapi.io"
+    secretName: istio-tls-secret
   rules:  rules:
   - http:
       paths:
