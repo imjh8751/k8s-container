@@ -2,7 +2,6 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: tls-gateway
-  namespace: tls # 원하는 네임스페이스로 지정
 spec:
   selector:
     istio: ingressgateway # use istio default controller
