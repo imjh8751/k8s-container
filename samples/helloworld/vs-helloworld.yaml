@@ -14,6 +14,6 @@ spec:
         exact: /helloworld
     route:
     - destination:
-        host: helloworld
+        host: hello
         port:
           number: 5000
