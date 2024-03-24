@@ -12,8 +12,8 @@ spec:
       protocol: HTTP
     hosts:
       - "api.itapi.org"
-    #tls:
-    #  httpsRedirect: true # http host가 설정되지않는 게이트웨이에대해서 모두 https로 리다이렉션
+    tls:
+      httpsRedirect: true # http host가 설정되지않는 게이트웨이에대해서 모두 https로 리다이렉션
   - port:
       number: 443
       name: https
