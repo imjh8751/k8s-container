@@ -25,7 +25,7 @@ spec:
   tls:
   - hosts:
     - "itapi.io"
-    secretName: istio-tls-secret
+    secretName: istio-ingressgateway-itapi-certs
   rules:
   - http:
       paths:
