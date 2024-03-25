@@ -11,7 +11,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-      - "api.itapi.org"
+      - "*.itapi.org"
     tls:
       httpsRedirect: true # http host가 설정되지않는 게이트웨이에대해서 모두 https로 리다이렉션
   - port:
@@ -22,4 +22,4 @@ spec:
       mode: SIMPLE # 통상적인 tls 모드입니다
       credentialName: istio-ingressgateway-itapi-certs # 쿠버네티스 secret 명을 입력
     hosts:
-      - "api.itapi.org"
+      - "*.itapi.org"
