@@ -24,7 +24,7 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "itapi.org"
+    - "*.itapi.org"
     secretName: istio-ingressgateway-itapi-certs
   rules:
   - http:
