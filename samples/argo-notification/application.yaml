@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/vlalphal
+kind: Application
+metadata:
+  name: app-01
+  namespace: argocd
+spec:
+  destination:
+    namespace: test
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: .
+    repoURL: https://itapi.org/cd/gitrepo.git
+    targetRevision: dev
+  syncPolicy: {}
