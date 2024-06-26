@@ -1,0 +1,30 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    name: pv-log
+  spec:
+    accessModes:
+    - ReadWriteMany
+    capacity:
+      storage: 20Gi
+    nfs:
+      path: /export/NFS_4T_VOL2
+      server: 192.168.0.102
+    psersistentVolumeReclaimPolicy: Retain
+    volumeMode: Filesystem
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    namespace: pv-name
+    name: pvc-log
+  spec:
+    accessModes:
+    - ReadWriteMany
+    resources:
+      requests:
+        storage: 20Gi
+      volumeName: pv-log
+      storageClassName: ''
+knid: List
