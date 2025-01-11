@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-user
+  namespace: service
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    for: user
+    type: service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-products
+  namespace: service
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    for: products
+    type: service
