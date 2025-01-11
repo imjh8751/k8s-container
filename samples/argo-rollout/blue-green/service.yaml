@@ -12,6 +12,7 @@ spec:
   selector:
     for: user
     type: service
+  type: NodePort
 ---
 apiVersion: v1
 kind: Service
@@ -26,6 +27,7 @@ spec:
   selector:
     for: user
     type: service
+  type: NodePort
 ---
 apiVersion: v1
 kind: Service
@@ -40,6 +42,7 @@ spec:
   selector:
     for: products
     type: service
+  type: NodePort
 ---
 apiVersion: v1
 kind: Service
@@ -54,3 +57,4 @@ spec:
   selector:
     for: products
     type: service
+  type: NodePort
