@@ -1,0 +1,67 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  # name: service-user
+  name: service-user-active
+  namespace: service
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    for: user
+    type: service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-user-preview
+  namespace: service
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    for: user
+    type: service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  # name: service-products
+  name: service-products-active
+  namespace: service
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    for: products
+    type: service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-products-preview
+  namespace: service
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    for: products
+    type: service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-product-backoffice
+  namespace: service
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+  selector:
+    for: service-product-backoffice
+    type: service
