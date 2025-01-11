@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: user
-          image: { imageURL }
+          image: nginx
           ports:
             - containerPort: 8080
           resources:
@@ -46,7 +46,7 @@ spec:
     spec:
       containers:
         - name: products
-          image: { imageURL }
+          image: nginx
           ports:
             - containerPort: 8080
           resources:
@@ -78,7 +78,7 @@ spec:
     spec:
       containers:
         - name: service-product-backoffice
-          image: { imageURL }
+          image: nginx
           ports:
             - containerPort: 8080
           resources:
