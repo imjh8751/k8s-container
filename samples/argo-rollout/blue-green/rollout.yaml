@@ -41,7 +41,7 @@ metadata:
   name: service-products
   namespace: service
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       type: service
