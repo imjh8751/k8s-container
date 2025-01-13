@@ -11,7 +11,7 @@ spec:
   - host: argo-blue.itapi.org
     http:
       paths:
-      - path: /
+      - path: /blue
         pathType: Prefix
         backend:
           service:
@@ -33,7 +33,7 @@ spec:
   - host: argo-green.itapi.org
     http:
       paths:
-      - path: /
+      - path: /green
         pathType: Prefix
         backend:
           service:
