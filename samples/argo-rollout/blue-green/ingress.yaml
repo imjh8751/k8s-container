@@ -1,0 +1,42 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bluegreen-active-ingress
+  namespace: service
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+spec:
+  ingressClassName: "nginx"
+  rules:
+  - host: 192.168.0.109
+    http:
+      paths:
+      - path: /active
+        pathType: Prefix
+        backend:
+          service:
+            name: rollout-bluegreen-active
+            port:
+              number: 80
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: bluegreen-preview-ingress
+  namespace: service
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+spec:
+  ingressClassName: "nginx"
+  rules:
+  - host: 192.168.0.109
+    http:
+      paths:
+      - path: /preview
+        pathType: Prefix
+        backend:
+          service:
+            name: rollout-bluegreen-preview
+            port:
+              number: 80
