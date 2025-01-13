@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: "nginx"
   rules:
-  - host: 192.168.0.109
+  - host: argo-blue.itapi.org
     http:
       paths:
       - path: /active
@@ -30,7 +30,7 @@ metadata:
 spec:
   ingressClassName: "nginx"
   rules:
-  - host: 192.168.0.109
+  - host: argo-green.itapi.org
     http:
       paths:
       - path: /preview
