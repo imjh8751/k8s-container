@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: rollout-canary-service
+  namespace: service
+spec:
+  type: ClusterIP
+  selector:
+      app: rollout-canary
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
