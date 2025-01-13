@@ -3,7 +3,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: rollout-bluegreen-active
-  namespace: argo-sample-app
+  namespace: service
 spec:
   type: ClusterIP
   selector:
@@ -18,7 +18,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: rollout-bluegreen-preview
-  namespace: argo-sample-app
+  namespace: service
 spec:
   type: ClusterIP
   selector:
