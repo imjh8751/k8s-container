@@ -1,0 +1,39 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: pod-hpa
+  namespace: hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: deploy-ip
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-ip
+  labels:
+    app: deploy-ip
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deploy-ip
+  template:
+    metadata:
+      labels:
+        app: deploy-ip
+    spec:
+      containers:
+      - name: chk-ip
+        image: imjh8751/chk-ip
