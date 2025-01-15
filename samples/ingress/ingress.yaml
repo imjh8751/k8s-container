@@ -13,7 +13,7 @@ spec:
           service:
             name: argocd-server
             port:
-              number: 80
+              number: 30610
       - path: /default
         pathType: Prefix
         backend:
