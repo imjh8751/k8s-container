@@ -36,4 +36,4 @@ spec:
     spec:
       containers:
       - name: chk-ip
-        image: imjh8751/chk-ip
+        image: sysnet4admin/chk-ip
