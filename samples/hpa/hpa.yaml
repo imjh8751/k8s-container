@@ -8,7 +8,7 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: deploy-ip
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 10
   metrics:
   - type: Resource
@@ -25,7 +25,6 @@ metadata:
   labels:
     app: deploy-ip
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: deploy-ip
