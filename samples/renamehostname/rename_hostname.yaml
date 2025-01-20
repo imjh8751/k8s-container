@@ -5,7 +5,7 @@ metadata:
   labels:
     app: deploy-nginx
 spec:
-  hostnname: temp_hostname
+  hostnname: temphostname
   replicas: 1
   selector:
     matchLabels:
