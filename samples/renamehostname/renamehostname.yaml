@@ -15,10 +15,10 @@ spec:
         app: deploy-nginx 
     spec:
       containers:
-      - name: nginx
+      - name: nginxasdf
         image: nginx
         env: 
-        - name: temphostname 
+        - name: HOSTNAME
           valueFrom: 
             fieldRef: 
               fieldPath: metadata.name
