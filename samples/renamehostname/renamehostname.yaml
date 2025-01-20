@@ -14,10 +14,10 @@ spec:
       labels:
         app: deploy-nginx 
     spec:
-      hostnname: temphostname
       containers:
       - name: nginx
         image: nginx
+        hostnname: temphostname
 ---
 apiVersion: v1
 kind: Service
