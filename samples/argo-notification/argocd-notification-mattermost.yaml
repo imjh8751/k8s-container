@@ -8,7 +8,7 @@ data:
     url: https://mattermost.itapi.org
     headers: #optional headers
     - name: Content-Type
-      value: application/json; charset=utf8
+      value: application/json
     insecureSkipVerify: true #optional bool
   template.server-post-prod-on-sync-failed: |
     webhook:
